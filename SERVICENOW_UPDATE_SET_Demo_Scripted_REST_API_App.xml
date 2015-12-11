@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2015-12-11 15:26:22">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<application_name>Demo API</application_name>
+<application_scope>sn_demo_api</application_scope>
+<application_version>3.0</application_version>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Sample Scripted REST Service illustrating features and and scriptable API use to access request and create a response.
+V3.0</description>
+<inserted/>
+<name>Demo API</name>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>e481f68d1398120005d1df173244b016</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>10b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_19716f9fcb010200080cb967634c9c4a</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;POST Body&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ * POST - Sample Request API - Body
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var body = request.body.data;
+
+    return {
+        "body.id": body.id
+    };
+})(request, response);
+]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/body&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/body&lt;/relative_path&gt;&lt;request_example&gt;{"id":1234}&lt;/request_example&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example operation that accesses the post body and returns it in response&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 05:18:24&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;19716f9fcb010200080cb967634c9c4a&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;POST Body&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_19716f9fcb010200080cb967634c9c4a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 04:33:53&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>10b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>POST Body</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_filter_9e9f588d1394120005d1df173244b0c8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_filter"><sys_filter action="INSERT_OR_UPDATE"><filter table="incident">sys_id=b3b358491394120005d1df173244b0ea^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="b3b358491394120005d1df173244b0ea"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><group/><last_used>2015-12-11 04:48:24</last_used><mobile>true</mobile><roles/><sys_class_name>sys_filter</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-12-11 04:48:04</sys_created_on><sys_customer_update>false</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9e9f588d1394120005d1df173244b0c8</sys_id><sys_mod_count>1</sys_mod_count><sys_name>mobile</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_filter_9e9f588d1394120005d1df173244b0c8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 04:48:24</sys_updated_on><table>incident</table><title>mobile</title><user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user></sys_filter></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>14b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table>incident</table>
+<target_name>mobile</target_name>
+<type>Filter</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_46d7ed63cb010200080cb967634c9c2a</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Script Include&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ * GET - Sample Request API - Script Include
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var responseObj = sn_demo_api.SampleDataUtil.getSampleJSON();
+    return responseObj;
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/scriptinclude&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/scriptinclude&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example operation that retrieves respons content from a script include&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 15:05:03&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;46d7ed63cb010200080cb967634c9c2a&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Script Include&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_46d7ed63cb010200080cb967634c9c2a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 04:33:22&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>14b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Script Include</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_bc2821a3cb010200080cb967634c9c96</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;sn_demo_api.SampleDataUtil&lt;/api_name&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;SampleDataUtil&lt;/description&gt;&lt;name&gt;SampleDataUtil&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var SampleDataUtil = Class.create();
+
+SampleDataUtil.prototype = {
+
+    //  properties
+
+
+    initialize: function () {
+    },
+
+    type: 'SampleDataUtil'
+};
+
+////////////////////
+//  Static Functions
+////////////////////
+/**
+ * Returns sample JSON Object
+ * Sample Usage: gs.print(global.SampleDataUtil.getSampleJSON());
+ */
+SampleDataUtil.getSampleJSON = function () {
+
+    var result = [
+        {
+            "userId": 1,
+            "id": 1,
+            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+            "userId": 1,
+            "id": 2,
+            "title": "qui est esse",
+            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+        },
+        {
+            "userId": 1,
+            "id": 3,
+            "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+            "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+        },
+        {
+            "userId": 1,
+            "id": 4,
+            "title": "eum et est occaecati",
+            "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+        },
+        {
+            "userId": 1,
+            "id": 5,
+            "title": "nesciunt quas odio",
+            "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+        },
+        {
+            "userId": 1,
+            "id": 6,
+            "title": "dolorem eum magni eos aperiam quia",
+            "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+        },
+        {
+            "userId": 1,
+            "id": 7,
+            "title": "magnam facilis autem",
+            "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+        },
+        {
+            "userId": 1,
+            "id": 8,
+            "title": "dolorem dolore est ipsam",
+            "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+        },
+        {
+            "userId": 1,
+            "id": 9,
+            "title": "nesciunt iure omnis dolorem tempora et accusantium",
+            "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+        },
+        {
+            "userId": 1,
+            "id": 10,
+            "title": "optio molestias id quia eum",
+            "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+        },
+        {
+            "userId": 2,
+            "id": 11,
+            "title": "et ea vero quia laudantium autem",
+            "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+        },
+        {
+            "userId": 2,
+            "id": 12,
+            "title": "in quibusdam tempore odit est dolorem",
+            "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+        },
+        {
+            "userId": 2,
+            "id": 13,
+            "title": "dolorum ut in voluptas mollitia et saepe quo animi",
+            "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
+        },
+        {
+            "userId": 2,
+            "id": 14,
+            "title": "voluptatem eligendi optio",
+            "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
+        },
+        {
+            "userId": 2,
+            "id": 15,
+            "title": "eveniet quod temporibus",
+            "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
+        },
+        {
+            "userId": 2,
+            "id": 16,
+            "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
+            "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
+        },
+        {
+            "userId": 2,
+            "id": 17,
+            "title": "fugit voluptas sed molestias voluptatem provident",
+            "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo"
+        },
+        {
+            "userId": 2,
+            "id": 18,
+            "title": "voluptate et itaque vero tempora molestiae",
+            "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
+        },
+        {
+            "userId": 2,
+            "id": 19,
+            "title": "adipisci placeat illum aut reiciendis qui",
+            "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+        },
+        {
+            "userId": 2,
+            "id": 20,
+            "title": "doloribus ad provident suscipit at",
+            "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
+        },
+        {
+            "userId": 3,
+            "id": 21,
+            "title": "asperiores ea ipsam voluptatibus modi minima quia sint",
+            "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"
+        },
+        {
+            "userId": 3,
+            "id": 22,
+            "title": "dolor sint quo a velit explicabo quia nam",
+            "body": "eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse"
+        },
+        {
+            "userId": 3,
+            "id": 23,
+            "title": "maxime id vitae nihil numquam",
+            "body": "veritatis unde neque eligendi\nquae quod architecto quo neque vitae\nest illo sit tempora doloremque fugit quod\net et vel beatae sequi ullam sed tenetur perspiciatis"
+        },
+        {
+            "userId": 3,
+            "id": 24,
+            "title": "autem hic labore sunt dolores incidunt",
+            "body": "enim et ex nulla\nomnis voluptas quia qui\nvoluptatem consequatur numquam aliquam sunt\ntotam recusandae id dignissimos aut sed asperiores deserunt"
+        },
+        {
+            "userId": 3,
+            "id": 25,
+            "title": "rem alias distinctio quo quis",
+            "body": "ullam consequatur ut\nomnis quis sit vel consequuntur\nipsa eligendi ipsum molestiae et omnis error nostrum\nmolestiae illo tempore quia et distinctio"
+        },
+        {
+            "userId": 3,
+            "id": 26,
+            "title": "est et quae odit qui non",
+            "body": "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero"
+        },
+        {
+            "userId": 3,
+            "id": 27,
+            "title": "quasi id et eos tenetur aut quo autem",
+            "body": "eum sed dolores ipsam sint possimus debitis occaecati\ndebitis qui qui et\nut placeat enim earum aut odit facilis\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur"
+        },
+        {
+            "userId": 3,
+            "id": 28,
+            "title": "delectus ullam et corporis nulla voluptas sequi",
+            "body": "non et quaerat ex quae ad maiores\nmaiores recusandae totam aut blanditiis mollitia quas illo\nut voluptatibus voluptatem\nsimilique nostrum eum"
+        },
+        {
+            "userId": 3,
+            "id": 29,
+            "title": "iusto eius quod necessitatibus culpa ea",
+            "body": "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores"
+        },
+        {
+            "userId": 3,
+            "id": 30,
+            "title": "a quo magni similique perferendis",
+            "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
+        },
+        {
+            "userId": 4,
+            "id": 31,
+            "title": "ullam ut quidem id aut vel consequuntur",
+            "body": "debitis eius sed quibusdam non quis consectetur vitae\nimpedit ut qui consequatur sed aut in\nquidem sit nostrum et maiores adipisci atque\nquaerat voluptatem adipisci repudiandae"
+        },
+        {
+            "userId": 4,
+            "id": 32,
+            "title": "doloremque illum aliquid sunt",
+            "body": "deserunt eos nobis asperiores et hic\nest debitis repellat molestiae optio\nnihil ratione ut eos beatae quibusdam distinctio maiores\nearum voluptates et aut adipisci ea maiores voluptas maxime"
+        },
+        {
+            "userId": 4,
+            "id": 33,
+            "title": "qui explicabo molestiae dolorem",
+            "body": "rerum ut et numquam laborum odit est sit\nid qui sint in\nquasi tenetur tempore aperiam et quaerat qui in\nrerum officiis sequi cumque quod"
+        },
+        {
+            "userId": 4,
+            "id": 34,
+            "title": "magnam ut rerum iure",
+            "body": "ea velit perferendis earum ut voluptatem voluptate itaque iusto\ntotam pariatur in\nnemo voluptatem voluptatem autem magni tempora minima in\nest distinctio qui assumenda accusamus dignissimos officia nesciunt nobis"
+        },
+        {
+            "userId": 4,
+            "id": 35,
+            "title": "id nihil consequatur molestias animi provident",
+            "body": "nisi error delectus possimus ut eligendi vitae\nplaceat eos harum cupiditate facilis reprehenderit voluptatem beatae\nmodi ducimus quo illum voluptas eligendi\net nobis quia fugit"
+        },
+        {
+            "userId": 4,
+            "id": 36,
+            "title": "fuga nam accusamus voluptas reiciendis itaque",
+            "body": "ad mollitia et omnis minus architecto odit\nvoluptas doloremque maxime aut non ipsa qui alias veniam\nblanditiis culpa aut quia nihil cumque facere et occaecati\nqui aspernatur quia eaque ut aperiam inventore"
+        },
+        {
+            "userId": 4,
+            "id": 37,
+            "title": "provident vel ut sit ratione est",
+            "body": "debitis et eaque non officia sed nesciunt pariatur vel\nvoluptatem iste vero et ea\nnumquam aut expedita ipsum nulla in\nvoluptates omnis consequatur aut enim officiis in quam qui"
+        },
+        {
+            "userId": 4,
+            "id": 38,
+            "title": "explicabo et eos deleniti nostrum ab id repellendus",
+            "body": "animi esse sit aut sit nesciunt assumenda eum voluptas\nquia voluptatibus provident quia necessitatibus ea\nrerum repudiandae quia voluptatem delectus fugit aut id quia\nratione optio eos iusto veniam iure"
+        },
+        {
+            "userId": 4,
+            "id": 39,
+            "title": "eos dolorem iste accusantium est eaque quam",
+            "body": "corporis rerum ducimus vel eum accusantium\nmaxime aspernatur a porro possimus iste omnis\nest in deleniti asperiores fuga aut\nvoluptas sapiente vel dolore minus voluptatem incidunt ex"
+        },
+        {
+            "userId": 4,
+            "id": 40,
+            "title": "enim quo cumque",
+            "body": "ut voluptatum aliquid illo tenetur nemo sequi quo facilis\nipsum rem optio mollitia quas\nvoluptatem eum voluptas qui\nunde omnis voluptatem iure quasi maxime voluptas nam"
+        },
+        {
+            "userId": 5,
+            "id": 41,
+            "title": "non est facere",
+            "body": "molestias id nostrum\nexcepturi molestiae dolore omnis repellendus quaerat saepe\nconsectetur iste quaerat tenetur asperiores accusamus ex ut\nnam quidem est ducimus sunt debitis saepe"
+        },
+        {
+            "userId": 5,
+            "id": 42,
+            "title": "commodi ullam sint et excepturi error explicabo praesentium voluptas",
+            "body": "odio fugit voluptatum ducimus earum autem est incidunt voluptatem\nodit reiciendis aliquam sunt sequi nulla dolorem\nnon facere repellendus voluptates quia\nratione harum vitae ut"
+        },
+        {
+            "userId": 5,
+            "id": 43,
+            "title": "eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis",
+            "body": "similique fugit est\nillum et dolorum harum et voluptate eaque quidem\nexercitationem quos nam commodi possimus cum odio nihil nulla\ndolorum exercitationem magnam ex et a et distinctio debitis"
+        },
+        {
+            "userId": 5,
+            "id": 44,
+            "title": "optio dolor molestias sit",
+            "body": "temporibus est consectetur dolore\net libero debitis vel velit laboriosam quia\nipsum quibusdam qui itaque fuga rem aut\nea et iure quam sed maxime ut distinctio quae"
+        },
+        {
+            "userId": 5,
+            "id": 45,
+            "title": "ut numquam possimus omnis eius suscipit laudantium iure",
+            "body": "est natus reiciendis nihil possimus aut provident\nex et dolor\nrepellat pariatur est\nnobis rerum repellendus dolorem autem"
+        },
+        {
+            "userId": 5,
+            "id": 46,
+            "title": "aut quo modi neque nostrum ducimus",
+            "body": "voluptatem quisquam iste\nvoluptatibus natus officiis facilis dolorem\nquis quas ipsam\nvel et voluptatum in aliquid"
+        },
+        {
+            "userId": 5,
+            "id": 47,
+            "title": "quibusdam cumque rem aut deserunt",
+            "body": "voluptatem assumenda ut qui ut cupiditate aut impedit veniam\noccaecati nemo illum voluptatem laudantium\nmolestiae beatae rerum ea iure soluta nostrum\neligendi et voluptate"
+        },
+        {
+            "userId": 5,
+            "id": 48,
+            "title": "ut voluptatem illum ea doloribus itaque eos",
+            "body": "voluptates quo voluptatem facilis iure occaecati\nvel assumenda rerum officia et\nillum perspiciatis ab deleniti\nlaudantium repellat ad ut et autem reprehenderit"
+        },
+        {
+            "userId": 5,
+            "id": 49,
+            "title": "laborum non sunt aut ut assumenda perspiciatis voluptas",
+            "body": "inventore ab sint\nnatus fugit id nulla sequi architecto nihil quaerat\neos tenetur in in eum veritatis non\nquibusdam officiis aspernatur cumque aut commodi aut"
+        },
+        {
+            "userId": 5,
+            "id": 50,
+            "title": "repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem",
+            "body": "error suscipit maxime adipisci consequuntur recusandae\nvoluptas eligendi et est et voluptates\nquia distinctio ab amet quaerat molestiae et vitae\nadipisci impedit sequi nesciunt quis consectetur"
+        },
+        {
+            "userId": 6,
+            "id": 51,
+            "title": "soluta aliquam aperiam consequatur illo quis voluptas",
+            "body": "sunt dolores aut doloribus\ndolore doloribus voluptates tempora et\ndoloremque et quo\ncum asperiores sit consectetur dolorem"
+        },
+        {
+            "userId": 6,
+            "id": 52,
+            "title": "qui enim et consequuntur quia animi quis voluptate quibusdam",
+            "body": "iusto est quibusdam fuga quas quaerat molestias\na enim ut sit accusamus enim\ntemporibus iusto accusantium provident architecto\nsoluta esse reprehenderit qui laborum"
+        },
+        {
+            "userId": 6,
+            "id": 53,
+            "title": "ut quo aut ducimus alias",
+            "body": "minima harum praesentium eum rerum illo dolore\nquasi exercitationem rerum nam\nporro quis neque quo\nconsequatur minus dolor quidem veritatis sunt non explicabo similique"
+        },
+        {
+            "userId": 6,
+            "id": 54,
+            "title": "sit asperiores ipsam eveniet odio non quia",
+            "body": "totam corporis dignissimos\nvitae dolorem ut occaecati accusamus\nex velit deserunt\net exercitationem vero incidunt corrupti mollitia"
+        },
+        {
+            "userId": 6,
+            "id": 55,
+            "title": "sit vel voluptatem et non libero",
+            "body": "debitis excepturi ea perferendis harum libero optio\neos accusamus cum fuga ut sapiente repudiandae\net ut incidunt omnis molestiae\nnihil ut eum odit"
+        },
+        {
+            "userId": 6,
+            "id": 56,
+            "title": "qui et at rerum necessitatibus",
+            "body": "aut est omnis dolores\nneque rerum quod ea rerum velit pariatur beatae excepturi\net provident voluptas corrupti\ncorporis harum reprehenderit dolores eligendi"
+        },
+        {
+            "userId": 6,
+            "id": 57,
+            "title": "sed ab est est",
+            "body": "at pariatur consequuntur earum quidem\nquo est laudantium soluta voluptatem\nqui ullam et est\net cum voluptas voluptatum repellat est"
+        },
+        {
+            "userId": 6,
+            "id": 58,
+            "title": "voluptatum itaque dolores nisi et quasi",
+            "body": "veniam voluptatum quae adipisci id\net id quia eos ad et dolorem\naliquam quo nisi sunt eos impedit error\nad similique veniam"
+        },
+        {
+            "userId": 6,
+            "id": 59,
+            "title": "qui commodi dolor at maiores et quis id accusantium",
+            "body": "perspiciatis et quam ea autem temporibus non voluptatibus qui\nbeatae a earum officia nesciunt dolores suscipit voluptas et\nanimi doloribus cum rerum quas et magni\net hic ut ut commodi expedita sunt"
+        },
+        {
+            "userId": 6,
+            "id": 60,
+            "title": "consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere",
+            "body": "asperiores sunt ab assumenda cumque modi velit\nqui esse omnis\nvoluptate et fuga perferendis voluptas\nillo ratione amet aut et omnis"
+        },
+        {
+            "userId": 7,
+            "id": 61,
+            "title": "voluptatem doloribus consectetur est ut ducimus",
+            "body": "ab nemo optio odio\ndelectus tenetur corporis similique nobis repellendus rerum omnis facilis\nvero blanditiis debitis in nesciunt doloribus dicta dolores\nmagnam minus velit"
+        },
+        {
+            "userId": 7,
+            "id": 62,
+            "title": "beatae enim quia vel",
+            "body": "enim aspernatur illo distinctio quae praesentium\nbeatae alias amet delectus qui voluptate distinctio\nodit sint accusantium autem omnis\nquo molestiae omnis ea eveniet optio"
+        },
+        {
+            "userId": 7,
+            "id": 63,
+            "title": "voluptas blanditiis repellendus animi ducimus error sapiente et suscipit",
+            "body": "enim adipisci aspernatur nemo\nnumquam omnis facere dolorem dolor ex quis temporibus incidunt\nab delectus culpa quo reprehenderit blanditiis asperiores\naccusantium ut quam in voluptatibus voluptas ipsam dicta"
+        },
+        {
+            "userId": 7,
+            "id": 64,
+            "title": "et fugit quas eum in in aperiam quod",
+            "body": "id velit blanditiis\neum ea voluptatem\nmolestiae sint occaecati est eos perspiciatis\nincidunt a error provident eaque aut aut qui"
+        },
+        {
+            "userId": 7,
+            "id": 65,
+            "title": "consequatur id enim sunt et et",
+            "body": "voluptatibus ex esse\nsint explicabo est aliquid cumque adipisci fuga repellat labore\nmolestiae corrupti ex saepe at asperiores et perferendis\nnatus id esse incidunt pariatur"
+        },
+        {
+            "userId": 7,
+            "id": 66,
+            "title": "repudiandae ea animi iusto",
+            "body": "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe"
+        },
+        {
+            "userId": 7,
+            "id": 67,
+            "title": "aliquid eos sed fuga est maxime repellendus",
+            "body": "reprehenderit id nostrum\nvoluptas doloremque pariatur sint et accusantium quia quod aspernatur\net fugiat amet\nnon sapiente et consequatur necessitatibus molestiae"
+        },
+        {
+            "userId": 7,
+            "id": 68,
+            "title": "odio quis facere architecto reiciendis optio",
+            "body": "magnam molestiae perferendis quisquam\nqui cum reiciendis\nquaerat animi amet hic inventore\nea quia deleniti quidem saepe porro velit"
+        },
+        {
+            "userId": 7,
+            "id": 69,
+            "title": "fugiat quod pariatur odit minima",
+            "body": "officiis error culpa consequatur modi asperiores et\ndolorum assumenda voluptas et vel qui aut vel rerum\nvoluptatum quisquam perspiciatis quia rerum consequatur totam quas\nsequi commodi repudiandae asperiores et saepe a"
+        },
+        {
+            "userId": 7,
+            "id": 70,
+            "title": "voluptatem laborum magni",
+            "body": "sunt repellendus quae\nest asperiores aut deleniti esse accusamus repellendus quia aut\nquia dolorem unde\neum tempora esse dolore"
+        },
+        {
+            "userId": 8,
+            "id": 71,
+            "title": "et iusto veniam et illum aut fuga",
+            "body": "occaecati a doloribus\niste saepe consectetur placeat eum voluptate dolorem et\nqui quo quia voluptas\nrerum ut id enim velit est perferendis"
+        },
+        {
+            "userId": 8,
+            "id": 72,
+            "title": "sint hic doloribus consequatur eos non id",
+            "body": "quam occaecati qui deleniti consectetur\nconsequatur aut facere quas exercitationem aliquam hic voluptas\nneque id sunt ut aut accusamus\nsunt consectetur expedita inventore velit"
+        },
+        {
+            "userId": 8,
+            "id": 73,
+            "title": "consequuntur deleniti eos quia temporibus ab aliquid at",
+            "body": "voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabo\naut eum minima consequatur\ntempore cumque quae est et\net in consequuntur voluptatem voluptates aut"
+        },
+        {
+            "userId": 8,
+            "id": 74,
+            "title": "enim unde ratione doloribus quas enim ut sit sapiente",
+            "body": "odit qui et et necessitatibus sint veniam\nmollitia amet doloremque molestiae commodi similique magnam et quam\nblanditiis est itaque\nquo et tenetur ratione occaecati molestiae tempora"
+        },
+        {
+            "userId": 8,
+            "id": 75,
+            "title": "dignissimos eum dolor ut enim et delectus in",
+            "body": "commodi non non omnis et voluptas sit\nautem aut nobis magnam et sapiente voluptatem\net laborum repellat qui delectus facilis temporibus\nrerum amet et nemo voluptate expedita adipisci error dolorem"
+        },
+        {
+            "userId": 8,
+            "id": 76,
+            "title": "doloremque officiis ad et non perferendis",
+            "body": "ut animi facere\ntotam iusto tempore\nmolestiae eum aut et dolorem aperiam\nquaerat recusandae totam odio"
+        },
+        {
+            "userId": 8,
+            "id": 77,
+            "title": "necessitatibus quasi exercitationem odio",
+            "body": "modi ut in nulla repudiandae dolorum nostrum eos\naut consequatur omnis\nut incidunt est omnis iste et quam\nvoluptates sapiente aliquam asperiores nobis amet corrupti repudiandae provident"
+        },
+        {
+            "userId": 8,
+            "id": 78,
+            "title": "quam voluptatibus rerum veritatis",
+            "body": "nobis facilis odit tempore cupiditate quia\nassumenda doloribus rerum qui ea\nillum et qui totam\naut veniam repellendus"
+        },
+        {
+            "userId": 8,
+            "id": 79,
+            "title": "pariatur consequatur quia magnam autem omnis non amet",
+            "body": "libero accusantium et et facere incidunt sit dolorem\nnon excepturi qui quia sed laudantium\nquisquam molestiae ducimus est\nofficiis esse molestiae iste et quos"
+        },
+        {
+            "userId": 8,
+            "id": 80,
+            "title": "labore in ex et explicabo corporis aut quas",
+            "body": "ex quod dolorem ea eum iure qui provident amet\nquia qui facere excepturi et repudiandae\nasperiores molestias provident\nminus incidunt vero fugit rerum sint sunt excepturi provident"
+        },
+        {
+            "userId": 9,
+            "id": 81,
+            "title": "tempora rem veritatis voluptas quo dolores vero",
+            "body": "facere qui nesciunt est voluptatum voluptatem nisi\nsequi eligendi necessitatibus ea at rerum itaque\nharum non ratione velit laboriosam quis consequuntur\nex officiis minima doloremque voluptas ut aut"
+        },
+        {
+            "userId": 9,
+            "id": 82,
+            "title": "laudantium voluptate suscipit sunt enim enim",
+            "body": "ut libero sit aut totam inventore sunt\nporro sint qui sunt molestiae\nconsequatur cupiditate qui iste ducimus adipisci\ndolor enim assumenda soluta laboriosam amet iste delectus hic"
+        },
+        {
+            "userId": 9,
+            "id": 83,
+            "title": "odit et voluptates doloribus alias odio et",
+            "body": "est molestiae facilis quis tempora numquam nihil qui\nvoluptate sapiente consequatur est qui\nnecessitatibus autem aut ipsa aperiam modi dolore numquam\nreprehenderit eius rem quibusdam"
+        },
+        {
+            "userId": 9,
+            "id": 84,
+            "title": "optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut",
+            "body": "sint molestiae magni a et quos\neaque et quasi\nut rerum debitis similique veniam\nrecusandae dignissimos dolor incidunt consequatur odio"
+        },
+        {
+            "userId": 9,
+            "id": 85,
+            "title": "dolore veritatis porro provident adipisci blanditiis et sunt",
+            "body": "similique sed nisi voluptas iusto omnis\nmollitia et quo\nassumenda suscipit officia magnam sint sed tempora\nenim provident pariatur praesentium atque animi amet ratione"
+        },
+        {
+            "userId": 9,
+            "id": 86,
+            "title": "placeat quia et porro iste",
+            "body": "quasi excepturi consequatur iste autem temporibus sed molestiae beatae\net quaerat et esse ut\nvoluptatem occaecati et vel explicabo autem\nasperiores pariatur deserunt optio"
+        },
+        {
+            "userId": 9,
+            "id": 87,
+            "title": "nostrum quis quasi placeat",
+            "body": "eos et molestiae\nnesciunt ut a\ndolores perspiciatis repellendus repellat aliquid\nmagnam sint rem ipsum est"
+        },
+        {
+            "userId": 9,
+            "id": 88,
+            "title": "sapiente omnis fugit eos",
+            "body": "consequatur omnis est praesentium\nducimus non iste\nneque hic deserunt\nvoluptatibus veniam cum et rerum sed"
+        },
+        {
+            "userId": 9,
+            "id": 89,
+            "title": "sint soluta et vel magnam aut ut sed qui",
+            "body": "repellat aut aperiam totam temporibus autem et\narchitecto magnam ut\nconsequatur qui cupiditate rerum quia soluta dignissimos nihil iure\ntempore quas est"
+        },
+        {
+            "userId": 9,
+            "id": 90,
+            "title": "ad iusto omnis odit dolor voluptatibus",
+            "body": "minus omnis soluta quia\nqui sed adipisci voluptates illum ipsam voluptatem\neligendi officia ut in\neos soluta similique molestias praesentium blanditiis"
+        },
+        {
+            "userId": 10,
+            "id": 91,
+            "title": "aut amet sed",
+            "body": "libero voluptate eveniet aperiam sed\nsunt placeat suscipit molestias\nsimilique fugit nam natus\nexpedita consequatur consequatur dolores quia eos et placeat"
+        },
+        {
+            "userId": 10,
+            "id": 92,
+            "title": "ratione ex tenetur perferendis",
+            "body": "aut et excepturi dicta laudantium sint rerum nihil\nlaudantium et at\na neque minima officia et similique libero et\ncommodi voluptate qui"
+        },
+        {
+            "userId": 10,
+            "id": 93,
+            "title": "beatae soluta recusandae",
+            "body": "dolorem quibusdam ducimus consequuntur dicta aut quo laboriosam\nvoluptatem quis enim recusandae ut sed sunt\nnostrum est odit totam\nsit error sed sunt eveniet provident qui nulla"
+        },
+        {
+            "userId": 10,
+            "id": 94,
+            "title": "qui qui voluptates illo iste minima",
+            "body": "aspernatur expedita soluta quo ab ut similique\nexpedita dolores amet\nsed temporibus distinctio magnam saepe deleniti\nomnis facilis nam ipsum natus sint similique omnis"
+        },
+        {
+            "userId": 10,
+            "id": 95,
+            "title": "id minus libero illum nam ad officiis",
+            "body": "earum voluptatem facere provident blanditiis velit laboriosam\npariatur accusamus odio saepe\ncumque dolor qui a dicta ab doloribus consequatur omnis\ncorporis cupiditate eaque assumenda ad nesciunt"
+        },
+        {
+            "userId": 10,
+            "id": 96,
+            "title": "quaerat velit veniam amet cupiditate aut numquam ut sequi",
+            "body": "in non odio excepturi sint eum\nlabore voluptates vitae quia qui et\ninventore itaque rerum\nveniam non exercitationem delectus aut"
+        },
+        {
+            "userId": 10,
+            "id": 97,
+            "title": "quas fugiat ut perspiciatis vero provident",
+            "body": "eum non blanditiis soluta porro quibusdam voluptas\nvel voluptatem qui placeat dolores qui velit aut\nvel inventore aut cumque culpa explicabo aliquid at\nperspiciatis est et voluptatem dignissimos dolor itaque sit nam"
+        },
+        {
+            "userId": 10,
+            "id": 98,
+            "title": "laboriosam dolor voluptates",
+            "body": "doloremque ex facilis sit sint culpa\nsoluta assumenda eligendi non ut eius\nsequi ducimus vel quasi\nveritatis est dolores"
+        },
+        {
+            "userId": 10,
+            "id": 99,
+            "title": "temporibus sit alias delectus eligendi possimus magni",
+            "body": "quo deleniti praesentium dicta non quod\naut est molestias\nmolestias et officia quis nihil\nitaque dolorem quia"
+        },
+        {
+            "userId": 10,
+            "id": 100,
+            "title": "at nam consequatur ea labore ea harum",
+            "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+        }
+    ];
+    return result;
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 15:06:13&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;bc2821a3cb010200080cb967634c9c96&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;SampleDataUtil&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_bc2821a3cb010200080cb967634c9c96&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-07-10 15:06:13&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>18b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>SampleDataUtil</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_c7b16f9fcb010200080cb967634c9c44</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;POST String&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ *  POST - Sample Request API - dataString
+ *  sample usage:
+ *  var requestBody = request.body;
+ *  var requestString = requestBody.dataString;
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var requestBody = request.body;
+    var requestString = requestBody.dataString;
+    return {"requestString": requestString};
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/string&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/string&lt;/relative_path&gt;&lt;request_example&gt;thisisjustastring&lt;/request_example&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example operation that showing posting just a string, accessing it via the ap&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 05:19:59&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;c7b16f9fcb010200080cb967634c9c44&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;POST String&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_c7b16f9fcb010200080cb967634c9c44&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 04:33:48&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>18b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>POST String</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_view_742821a3cb010200080cb967634c9c87</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view"><sys_ui_view action="INSERT_OR_UPDATE"><group/><hidden>false</hidden><name>undefined</name><roles/><sys_class_name>sys_ui_view</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 15:05:45</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>742821a3cb010200080cb967634c9c87</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Undefined</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ui_view_742821a3cb010200080cb967634c9c87</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-07-10 15:05:45</sys_updated_on><title>Undefined</title><user/></sys_ui_view></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>1cb17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Undefined</target_name>
+<type>UI View</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_query_parameter_map_c7f223dfcb010200080cb967634c9c2a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter_map"><sys_ws_query_parameter_map action="INSERT_OR_UPDATE"><sys_class_name>sys_ws_query_parameter_map</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 05:24:05</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>c7f223dfcb010200080cb967634c9c2a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>3cc2ef9fcb010200080cb967634c9c77</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ws_query_parameter_map_c7f223dfcb010200080cb967634c9c2a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-07-10 05:24:05</sys_updated_on><web_service_operation display_value="Query Params">daa02f9fcb010200080cb967634c9c2f</web_service_operation><web_service_query_parameter display_value="name">3cc2ef9fcb010200080cb967634c9c77</web_service_query_parameter></sys_ws_query_parameter_map></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>1cb17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>3cc2ef9fcb010200080cb967634c9c77</target_name>
+<type>Scripted REST Query Parameter Associatio</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_bebfdb9fcb010200080cb967634c9ce0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app"><sys_app action="INSERT_OR_UPDATE"><active>true</active><licensable>true</licensable><logo/><menu/><name>Demo API</name><private>false</private><scope>sn_demo_api</scope><short_description>Sample Scripted REST Service illustrating features and and scriptable API use to access request and create a response.</short_description><source>sn_demo_api</source><store_correlation_id/><store_url/><sys_class_name>sys_app</sys_class_name><sys_code/><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 05:09:46</sys_created_on><sys_id>bebfdb9fcb010200080cb967634c9ce0</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 15:23:12</sys_updated_on><template/><user_role/><vendor/><vendor_prefix/><version>3.0</version></sys_app></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>50b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Demo API</target_name>
+<type>Custom Application</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_37c0fde3cb010200080cb967634c9c05</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Custom JSON&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ *  GET - Sample Request API - custom json
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var requestBody = request.body;
+    var writer = response.getStreamWriter();
+    var hdrs = {};
+    var samplejson = {"breweries":[{"name":"victory","beers":["Golden Monkey","Prima Pils"]},{"name":"Paulaner","beers":["Pils","Hefeweizen"]}]};
+    var jsonstring = global.JSON.stringify(samplejson);
+    hdrs['Content-Type'] = 'application/json';
+
+    response.setStatus(200);
+    response.setHeaders(hdrs);
+    writer.writeString(jsonstring);
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/customjson&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/customjson&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example operation that returns a custom JSON response&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 15:44:22&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;37c0fde3cb010200080cb967634c9c05&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Custom JSON&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_37c0fde3cb010200080cb967634c9c05&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-07-10 20:04:25&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>50b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Custom JSON</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_c080be4d1398120005d1df173244b06f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description/><ignore_cache>false</ignore_cache><is_private>false</is_private><name>glide.appcreator.company.friendly_name</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-12-11 15:21:09</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>c080be4d1398120005d1df173244b06f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>glide.appcreator.company.friendly_name</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_properties_c080be4d1398120005d1df173244b06f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 15:21:09</sys_updated_on><type>string</type><value>Service-now.com</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=c080be4d1398120005d1df173244b06f"/></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>54b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>glide.appcreator.company.friendly_name</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_48316f9fcb010200080cb967634c9c71</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Path Params&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ * GET - Sample Request API - Path Params
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var uri = request.uri;
+    var url = request.url;
+    var path = request.pathParams;
+
+    return {
+        "uri": uri,
+        "url": url,
+        "path_params": path,
+        "path.id": path.id,
+		"path.name": path.name
+    };
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/pathparams/{id}/service/{name}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/pathparams/{id}/service/{name}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example operation that shows how to access path parameters&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 05:17:00&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;48316f9fcb010200080cb967634c9c71&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;Path Params&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_48316f9fcb010200080cb967634c9c71&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 15:19:11&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>54b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Path Params</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_list_sys_attachment_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_list parent="" relationship="" sys_domain="global" table="sys_attachment" version="2" view=""><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>file_name</element><list_id display_value="sys_attachment" element="NULL" name="sys_attachment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9696fbebc0a80164000bd5df61f3232d</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>system</sys_created_by><sys_created_on>2015-12-10 01:14:06</sys_created_on><sys_id>a605a2681310120005d1df173244b069</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>system</sys_updated_by><sys_updated_on>2015-12-10 01:14:06</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>content_type</element><list_id display_value="sys_attachment" element="NULL" name="sys_attachment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9696fbebc0a80164000bd5df61f3232d</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>system</sys_created_by><sys_created_on>2015-12-10 01:14:06</sys_created_on><sys_id>2a05a2681310120005d1df173244b069</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>system</sys_updated_by><sys_updated_on>2015-12-10 01:14:06</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>table_name</element><list_id display_value="sys_attachment" element="NULL" name="sys_attachment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9696fbebc0a80164000bd5df61f3232d</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>system</sys_created_by><sys_created_on>2015-12-10 01:14:06</sys_created_on><sys_id>aa05a2681310120005d1df173244b069</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>system</sys_updated_by><sys_updated_on>2015-12-10 01:14:06</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>table_sys_id</element><list_id display_value="sys_attachment" element="NULL" name="sys_attachment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9696fbebc0a80164000bd5df61f3232d</list_id><max_value>false</max_value><min_value>false</min_value><position>3</position><sum>false</sum><sys_created_by>system</sys_created_by><sys_created_on>2015-12-10 01:14:06</sys_created_on><sys_id>2e05a2681310120005d1df173244b069</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>system</sys_updated_by><sys_updated_on>2015-12-10 01:14:06</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>sys_attachment</name><parent/><position/><relationship/><sum>false</sum><sys_class_name>sys_ui_list</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-12-11 04:49:13</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5fdfdc8d1394120005d1df173244b064</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sys_attachment</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ui_list_sys_attachment_null</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 04:49:13</sys_updated_on><sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_list></sys_ui_list></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>58b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table>sys_attachment</table>
+<target_name>Attachment</target_name>
+<type>List Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view>Default view</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_daa02f9fcb010200080cb967634c9c2f</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Query Params&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ * GET - Sample Request API - Query Params
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var uri = request.uri;
+    var url = request.url;
+    var queryParams = request.queryParams;
+    var customHeader = request.getHeader('X-Custom');
+
+    return {
+        "uri": uri,
+        "url": url,
+        "queryParams": queryParams,
+        "customHeader": customHeader
+    };
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/queryParams&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/queryParams&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example operation that shows how to access query parameters&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 05:14:57&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;daa02f9fcb010200080cb967634c9c2f&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Query Params&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_daa02f9fcb010200080cb967634c9c2f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 04:34:05&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>58b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Query Params</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_definition_8ecfdb9fcb010200080cb967634c9ce1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/sn_demo_api/example</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link>https://www.google.com</doc_link><enforce_acl/><is_versioned>true</is_versioned><name>Sample REST API</name><namespace>sn_demo_api</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>example</service_id><short_description>Sample Scripted REST Service to demonstrate API and Functionality</short_description><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 05:12:29</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>8ecfdb9fcb010200080cb967634c9ce1</sys_id><sys_mod_count>8</sys_mod_count><sys_name>Sample REST API</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ws_definition_8ecfdb9fcb010200080cb967634c9ce1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 04:23:18</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>5cb17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Sample REST API</target_name>
+<type>Scripted REST API</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_version_f9da3d27cb010200080cb967634c9c52</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_version"><sys_ws_version action="INSERT_OR_UPDATE"><active>true</active><deprecated>false</deprecated><is_default>false</is_default><short_description/><sys_class_name>sys_ws_version</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 16:27:28</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>f9da3d27cb010200080cb967634c9c52</sys_id><sys_mod_count>2</sys_mod_count><sys_name>v1</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ws_version_f9da3d27cb010200080cb967634c9c52</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-07-10 16:29:58</sys_updated_on><version>1</version><version_id>v1</version_id><web_service_definition display_value="Sample REST API">8ecfdb9fcb010200080cb967634c9ce1</web_service_definition></sys_ws_version></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>5cb17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>v1</target_name>
+<type>Scripted REST Version</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_cors_rule_aa802ccd1394120005d1df173244b048</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_cors_rule"><sys_cors_rule action="DELETE"><delete>false</delete><domain>foo.example.com</domain><exposed_headers/><get>false</get><max_age>0</max_age><name>Sample CORS</name><patch>false</patch><post>false</post><put>false</put><rest_api>8ecfdb9fcb010200080cb967634c9ce1</rest_api><sys_class_name>sys_cors_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-12-11 04:53:10</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>aa802ccd1394120005d1df173244b048</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Sample CORS</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_cors_rule_aa802ccd1394120005d1df173244b048</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 05:08:53</sys_updated_on></sys_cors_rule></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>90b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Sample CORS</target_name>
+<type>CORS Rule</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_44dc44851394120005d1df173244b0a1</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;8ceb8c451394120005d1df173244b0ea&lt;/enforce_acl&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Hello World&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+   return {"hello":"world"};
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/hello_world&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/hello_world&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-12-11 03:26:32&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;44dc44851394120005d1df173244b0a1&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Hello World&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_44dc44851394120005d1df173244b0a1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 04:39:35&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>90b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Hello World</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_script_access_e04fd163cb010200080cb967634c9c16</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_script_access"><sys_scope_script_access action="INSERT_OR_UPDATE"><example_stack_trace>Default-thread-2
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.getCurrentStackTrace(ScopeAccessProvider.java:231)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.record(ScopeAccessProvider.java:200)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.access$1(ScopeAccessProvider.java:176)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider.recordAccess(ScopeAccessProvider.java:63)
+	com.glide.sys.fencing.dependency.ScopeAccessRecorder.record(ScopeAccessRecorder.java:13)
+	com.glide.script.system.ASystemInclude.recordCrossScopeAccess(ASystemInclude.java:123)
+	com.glide.script.system.ASystemInclude.include(ASystemInclude.java:106)
+	com.glide.script.AGlideRhinoScopeHandler.isScriptInclude(AGlideRhinoScopeHandler.java:43)
+	com.glide.script.GlideRhinoScopeHandler.found(GlideRhinoScopeHandler.java:27)
+	com.glide.script.ARhinoScope.get(ARhinoScope.java:75)
+	com.glide.script.RhinoScope.get(RhinoScope.java:51)
+	com.glide.script.PackageRhinoGlobalScope.get(PackageRhinoGlobalScope.java:34)
+	com.glide.script.PackageParent.isObjectInGlobal(PackageParent.java:50)
+	com.glide.script.PackageParent.get(PackageParent.java:31)
+	org.mozilla.javascript.ScriptableObject.getProperty(ScriptableObject.java:1478)
+	org.mozilla.javascript.ScriptRuntime.name(ScriptRuntime.java:1083)
+	org.mozilla.javascript.gen.c1305.call(sys_ws_operation.45bd9163cb010200080cb967634c9c2c:8)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c1306.call(sys_ws_operation.45bd9163cb010200080cb967634c9c2c:4)
+	org.mozilla.javascript.gen.c1306.exec(sys_ws_operation.45bd9163cb010200080cb967634c9c2c)
+	com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:233)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:105)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:72)
+	com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:316)
+	com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:277)
+	com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:248)
+	com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:238)
+	com.glide.rest.service.custom.CustomService.runScript(CustomService.java:95)
+	com.glide.rest.service.custom.CustomService.execute(CustomService.java:82)
+	com.glide.rest.handler.impl.ServiceHandlerImpl.invokeService(ServiceHandlerImpl.java:36)
+	com.glide.rest.processors.RESTAPIProcessor.process(RESTAPIProcessor.java:206)
+	com.glide.processors.AProcessor.runProcessor(AProcessor.java:395)
+	com.glide.processors.AProcessor.processTransaction(AProcessor.java:169)
+	com.glide.processors.ProcessorRegistry.process(ProcessorRegistry.java:165)
+	com.glide.ui.GlideServletTransaction.process(GlideServletTransaction.java:32)
+	com.glide.sys.ServletTransaction.run(ServletTransaction.java:34)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	java.lang.Thread.run(Thread.java:695)
+</example_stack_trace><script_name>JSON</script_name><source_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</source_scope><sys_class_name>sys_scope_script_access</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 14:26:57</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>e04fd163cb010200080cb967634c9c16</sys_id><sys_mod_count>0</sys_mod_count><sys_name>JSON</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_scope_script_access_e04fd163cb010200080cb967634c9c16</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-07-10 14:26:57</sys_updated_on><target_scope display_value="Global">global</target_scope></sys_scope_script_access></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>94b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>JSON</target_name>
+<type>Scope Script Access</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_7efea24d1398120005d1df173244b042</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Incidents (not streaming)&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ *  Sample Scripted REST Resource returns an array of custom JSON objects that include 2 incident properties.
+ *  This sample uses ServiceNow JavaScript API to query incident records and then iterates
+ *  over those records building a custom JSON object that includes 2 properties from the incident records.
+ *  note that because we are returning a simple JSON object we can rely on built in serialization
+ *  to set the content-type header as well as response status. The 'result_arr' object will not be returned
+ *  until it has been completely built and stored
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var table = 'incident',
+        record_limit = 100,
+        result_arr = [],
+        gr = new GlideRecord(table);
+
+
+    gr.setLimit(record_limit);
+    gr.query();
+
+
+    //  iterate over incident records and build JSON representations to be streamed out.
+    while (gr.next()) {
+        var incidentObj = {};
+
+        incidentObj.number = gr.number + '';
+        incidentObj.short_description = gr.short_description + '';
+
+        result_arr.push(incidentObj);
+    }
+
+    return result_arr;
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/incident&lt;/operation_uri&gt;&lt;produces&gt;application/json&lt;/produces&gt;&lt;produces_customized&gt;true&lt;/produces_customized&gt;&lt;relative_path&gt;/incident&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example of streaming incident record information via a Scripted REST API&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-12-11 15:14:30&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;7efea24d1398120005d1df173244b042&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Incidents (not streaming)&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_7efea24d1398120005d1df173244b042&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 15:14:30&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>94b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Incidents (not streaming)</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_list_sys_metadata_sys_app_developerstudio</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_list parent="sys_app" relationship="" sys_domain="global" table="sys_metadata" version="2" view="developerstudio"><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>sys_name</element><list_id display_value="sys_metadata" element="NULL" name="sys_metadata" parent="sys_app" relationship="NULL" sys_domain="global" view="676833f1d7523100b6bddb0c8252031a">bef7b722d713310092610eca5e6103c2</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-04-11 23:10:23</sys_created_on><sys_id>72f7b722d713310092610eca5e6103c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-04-11 23:10:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>sys_class_name</element><list_id display_value="sys_metadata" element="NULL" name="sys_metadata" parent="sys_app" relationship="NULL" sys_domain="global" view="676833f1d7523100b6bddb0c8252031a">bef7b722d713310092610eca5e6103c2</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-04-11 23:10:23</sys_created_on><sys_id>b2f7b722d713310092610eca5e6103c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-04-11 23:10:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>sys_policy</element><list_id display_value="sys_metadata" element="NULL" name="sys_metadata" parent="sys_app" relationship="NULL" sys_domain="global" view="676833f1d7523100b6bddb0c8252031a">bef7b722d713310092610eca5e6103c2</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-04-11 23:10:23</sys_created_on><sys_id>f2f7b722d713310092610eca5e6103c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-04-11 23:10:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>sys_update_name</element><list_id display_value="sys_metadata" element="NULL" name="sys_metadata" parent="sys_app" relationship="NULL" sys_domain="global" view="676833f1d7523100b6bddb0c8252031a">bef7b722d713310092610eca5e6103c2</list_id><max_value>false</max_value><min_value>false</min_value><position>3</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-04-11 23:10:23</sys_created_on><sys_id>36f7b722d713310092610eca5e6103c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-04-11 23:10:23</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>sys_metadata</name><parent>sys_app</parent><position/><relationship/><sum>false</sum><sys_class_name>sys_ui_list</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-12-11 15:21:25</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>4090fe4d1398120005d1df173244b04c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sys_metadata</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ui_list_sys_metadata_sys_app_developerstudio</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 15:21:25</sys_updated_on><sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user><view display_value="DeveloperStudio" name="developerstudio">676833f1d7523100b6bddb0c8252031a</view><view_name/></sys_ui_list></sys_ui_list></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>98b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table>sys_metadata</table>
+<target_name>Custom Application.Application File</target_name>
+<type>List Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view>developerstudio</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_ee626963cb010200080cb967634c9c4c</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Bad Request Error&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ * Bad Request Error Sample
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    return new sn_ws_err.BadRequestError("My error message");
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/badrequesterror&lt;/operation_uri&gt;&lt;produces&gt;application/json&lt;/produces&gt;&lt;produces_customized&gt;true&lt;/produces_customized&gt;&lt;relative_path&gt;/badrequesterror&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Sample Error Message Returning Bad Request&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 14:41:08&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;ee626963cb010200080cb967634c9c4c&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Bad Request Error&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_ee626963cb010200080cb967634c9c4c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 04:33:34&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>98b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Bad Request Error</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_header_13742713cb410200080cb967634c9ca9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_header"><sys_ws_header action="INSERT_OR_UPDATE"><example_value>Victory Golden Monkey</example_value><name>X-Custom</name><required>false</required><short_description>Custom header, identifying my favorite type of beer</short_description><sys_class_name>sys_ws_header</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 05:32:05</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>13742713cb410200080cb967634c9ca9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>X-Custom</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ws_header_13742713cb410200080cb967634c9ca9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-07-10 05:32:05</sys_updated_on><web_service_definition display_value="Sample REST API">8ecfdb9fcb010200080cb967634c9ce1</web_service_definition></sys_ws_header></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>9cb17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>X-Custom</target_name>
+<type>Scripted REST Header</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_cors_rule_b0b4684113d4120005d1df173244b0d2</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_cors_rule"><sys_cors_rule action="INSERT_OR_UPDATE"><delete>false</delete><domain>http://foo.example.com</domain><exposed_headers/><get>true</get><max_age>0</max_age><name>foo.example.com</name><patch>false</patch><post>false</post><put>false</put><rest_api>8ecfdb9fcb010200080cb967634c9ce1</rest_api><sys_class_name>sys_cors_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-12-11 05:10:46</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>b0b4684113d4120005d1df173244b0d2</sys_id><sys_mod_count>2</sys_mod_count><sys_name>foo.example.com</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_cors_rule_b0b4684113d4120005d1df173244b0d2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 05:37:44</sys_updated_on></sys_cors_rule></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>d0b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>foo.example.com</target_name>
+<type>CORS Rule</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_45bd9163cb010200080cb967634c9c2c</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Text/Plain String&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ *  GET - Sample Request API - plain text string
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var requestBody = request.body;
+    var writer = response.getStreamWriter();
+	var hdrs = {};
+	hdrs['Content-Type'] = 'text/plain';
+
+	response.setStatus(200);
+	response.setHeaders(hdrs);
+	writer.writeString("plain text string");
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/writestring&lt;/operation_uri&gt;&lt;produces&gt;text/plain&lt;/produces&gt;&lt;produces_customized&gt;true&lt;/produces_customized&gt;&lt;relative_path&gt;/writestring&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example operation that returns custom content type as text/plain&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-10 14:20:42&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;45bd9163cb010200080cb967634c9c2c&lt;/sys_id&gt;&lt;sys_mod_count&gt;13&lt;/sys_mod_count&gt;&lt;sys_name&gt;Text/Plain String&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_45bd9163cb010200080cb967634c9c2c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 04:33:42&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>d0b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Text/Plain String</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_table_access_357d660d1398120005d1df173244b07e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_table_access"><sys_scope_table_access action="INSERT_OR_UPDATE"><create_access>false</create_access><delete_access>false</delete_access><example_stack_trace>Default-thread-4
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.getCurrentStackTrace(ScopeAccessProvider.java:231)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.record(ScopeAccessProvider.java:200)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.access$100(ScopeAccessProvider.java:80)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider.recordAccess(ScopeAccessProvider.java:63)
+	com.glide.sys.fencing.dependency.ScopeAccessRecorder.record(ScopeAccessRecorder.java:13)
+	com.glide.script.fencing.access.ScopedTableAccess.hasRightsTo(ScopedTableAccess.java:89)
+	com.glide.script.fencing.access.ScopedTableAccess.hasRightsToTable(ScopedTableAccess.java:39)
+	com.glide.script.fencing.ScopedGlideRecord.jsFunction_query(ScopedGlideRecord.java:157)
+	sun.reflect.GeneratedMethodAccessor380.invoke(Unknown Source)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	java.lang.reflect.Method.invoke(Method.java:597)
+	org.mozilla.javascript.FunctionObject.doInvoke(FunctionObject.java:597)
+	org.mozilla.javascript.FunctionObject.call(FunctionObject.java:504)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c3766.call(sys_ws_operation.a83d660d1398120005d1df173244b078:20)
+	org.mozilla.javascript.ScriptRuntime.call(ScriptRuntime.java:1227)
+	org.mozilla.javascript.gen.c3767.call(sys_ws_operation.a83d660d1398120005d1df173244b078:7)
+	org.mozilla.javascript.gen.c3767.exec(sys_ws_operation.a83d660d1398120005d1df173244b078)
+	com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:233)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:105)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:72)
+	com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:318)
+	com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:283)
+	com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:254)
+	com.glide.script.fencing.GlideScopedEvaluator.evaluateScript(GlideScopedEvaluator.java:242)
+	com.glide.rest.service.custom.CustomService.runScript(CustomService.java:95)
+	com.glide.rest.service.custom.CustomService.execute(CustomService.java:82)
+	com.glide.rest.handler.impl.ServiceHandlerImpl.invokeService(ServiceHandlerImpl.java:36)
+	com.glide.rest.processors.RESTAPIProcessor.process(RESTAPIProcessor.java:216)
+	com.glide.processors.AProcessor.runProcessor(AProcessor.java:404)
+	com.glide.processors.AProcessor.processTransaction(AProcessor.java:178)
+	com.glide.processors.ProcessorRegistry.process(ProcessorRegistry.java:165)
+	com.glide.ui.GlideServletTransaction.process(GlideServletTransaction.java:32)
+	com.glide.sys.ServletTransaction.run(ServletTransaction.java:34)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	java.lang.Thread.run(Thread.java:682)
+</example_stack_trace><read_access>true</read_access><source_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</source_scope><sys_class_name>sys_scope_table_access</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-12-11 15:07:53</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>357d660d1398120005d1df173244b07e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>incident</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_scope_table_access_357d660d1398120005d1df173244b07e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 15:07:53</sys_updated_on><table_name>incident</table_name><target_scope display_value="Global">global</target_scope><write_access>false</write_access></sys_scope_table_access></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>d4b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>incident</target_name>
+<type>Scope Table Access</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_a83d660d1398120005d1df173244b078</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Incidents (streaming)&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[/**
+ *  Sample Scripted REST Resource returning custom JSON objects with properties from Incident Glide Records
+ *  This sample uses ServiceNow JavaScript API to query incident records
+ *  and then iterates over those records building and streaming a custom JSON object that includes some properties
+ *  from the incidents
+ */
+(function runOperation(/*RESTServiceRequest*/ request, /*RESTServiceResult*/ response) {
+    var writer = response.getStreamWriter(),
+        hdrs = {},
+        table = 'incident',
+        record_limit = 100,
+        gr = new GlideRecord(table);
+
+
+    hdrs['Content-Type'] = 'application/json';
+    response.setStatus(200);
+    response.setHeaders(hdrs);
+
+    gr.setLimit(record_limit);
+    gr.query();
+
+    //  start building response object
+    writer.writeString("{\"stream results\":[");
+
+
+    //  iterate over incident records and build JSON representations to be streamed out.
+    while (gr.next()) {
+        var incidentObj = {};
+
+        incidentObj.number = gr.number + '';
+        incidentObj.short_description = gr.short_description + '';
+        writer.writeString(global.JSON.stringify(incidentObj));
+
+        if (gr.hasNext()) {
+            writer.writeString(",");
+        }
+    }
+
+    //  close the response object
+    writer.writeString("]}");
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/sn_demo_api/v1/example/incident_stream&lt;/operation_uri&gt;&lt;produces&gt;application/json&lt;/produces&gt;&lt;produces_customized&gt;true&lt;/produces_customized&gt;&lt;relative_path&gt;/incident_stream&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description&gt;Example of streaming incident record information via a Scripted REST API&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-12-11 15:07:43&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;a83d660d1398120005d1df173244b078&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Incidents (streaming)&lt;/sys_name&gt;&lt;sys_package display_value="Demo API" source="sn_demo_api"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Demo API"&gt;bebfdb9fcb010200080cb967634c9ce0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_a83d660d1398120005d1df173244b078&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2015-12-11 15:17:33&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Sample REST API"&gt;8ecfdb9fcb010200080cb967634c9ce1&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f9da3d27cb010200080cb967634c9c52&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>d4b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>Incidents (streaming)</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_list_sys_ws_operation_sys_ws_definition_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_list parent="sys_ws_definition" relationship="" sys_domain="global" table="sys_ws_operation" version="2" view=""><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>name</element><list_id display_value="sys_ws_operation" element="NULL" name="sys_ws_operation" parent="sys_ws_definition" relationship="NULL" sys_domain="global" view="Default view">6543c3129f333100cf4696fcc67fcf6a</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-05-05 21:13:02</sys_created_on><sys_id>e543c3129f333100cf4696fcc67fcf6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-05-05 21:13:02</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>http_method</element><list_id display_value="sys_ws_operation" element="NULL" name="sys_ws_operation" parent="sys_ws_definition" relationship="NULL" sys_domain="global" view="Default view">6543c3129f333100cf4696fcc67fcf6a</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-05-05 21:13:02</sys_created_on><sys_id>2943c3129f333100cf4696fcc67fcf6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-05-05 21:13:02</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>relative_path</element><list_id display_value="sys_ws_operation" element="NULL" name="sys_ws_operation" parent="sys_ws_definition" relationship="NULL" sys_domain="global" view="Default view">6543c3129f333100cf4696fcc67fcf6a</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-05-05 21:13:02</sys_created_on><sys_id>6943c3129f333100cf4696fcc67fcf6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-05-05 21:13:02</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>operation_uri</element><list_id display_value="sys_ws_operation" element="NULL" name="sys_ws_operation" parent="sys_ws_definition" relationship="NULL" sys_domain="global" view="Default view">6543c3129f333100cf4696fcc67fcf6a</list_id><max_value>false</max_value><min_value>false</min_value><position>3</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-05-05 21:13:02</sys_created_on><sys_id>a943c3129f333100cf4696fcc67fcf6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-05-05 21:13:02</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>web_service_definition</element><list_id display_value="sys_ws_operation" element="NULL" name="sys_ws_operation" parent="sys_ws_definition" relationship="NULL" sys_domain="global" view="Default view">6543c3129f333100cf4696fcc67fcf6a</list_id><max_value>false</max_value><min_value>false</min_value><position>4</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-05-05 21:13:02</sys_created_on><sys_id>e943c3129f333100cf4696fcc67fcf6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-05-05 21:13:02</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>web_service_version</element><list_id display_value="sys_ws_operation" element="NULL" name="sys_ws_operation" parent="sys_ws_definition" relationship="NULL" sys_domain="global" view="Default view">6543c3129f333100cf4696fcc67fcf6a</list_id><max_value>false</max_value><min_value>false</min_value><position>5</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-05-05 21:13:02</sys_created_on><sys_id>2d43c3129f333100cf4696fcc67fcf6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-05-05 21:13:02</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>active</element><list_id display_value="sys_ws_operation" element="NULL" name="sys_ws_operation" parent="sys_ws_definition" relationship="NULL" sys_domain="global" view="Default view">6543c3129f333100cf4696fcc67fcf6a</list_id><max_value>false</max_value><min_value>false</min_value><position>6</position><sum>false</sum><sys_created_by>admin</sys_created_by><sys_created_on>2015-05-05 21:13:02</sys_created_on><sys_id>6d43c3129f333100cf4696fcc67fcf6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-05-05 21:13:02</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>sys_ws_operation</name><parent>sys_ws_definition</parent><position/><relationship/><sum>false</sum><sys_class_name>sys_ui_list</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-12-11 04:23:52</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>081a540d1394120005d1df173244b0d0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sys_ws_operation</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ui_list_sys_ws_operation_sys_ws_definition_null</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-12-11 04:23:52</sys_updated_on><sys_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</sys_user><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_list></sys_ui_list></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>d8b17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table>sys_ws_operation</table>
+<target_name>Scripted REST API.Scripted REST Resource</target_name>
+<type>List Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view>Default view</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_query_parameter_3cc2ef9fcb010200080cb967634c9c77</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter"><sys_ws_query_parameter action="INSERT_OR_UPDATE"><example_value>Bryan</example_value><name>name</name><required>true</required><short_description>name of user</short_description><sys_class_name>sys_ws_query_parameter</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 05:23:16</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>3cc2ef9fcb010200080cb967634c9c77</sys_id><sys_mod_count>0</sys_mod_count><sys_name>name</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ws_query_parameter_3cc2ef9fcb010200080cb967634c9c77</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-07-10 05:23:16</sys_updated_on><web_service_definition display_value="Sample REST API">8ecfdb9fcb010200080cb967634c9ce1</web_service_definition></sys_ws_query_parameter></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>d8b17a8d1398120005d1df173244b038</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>name</target_name>
+<type>Scripted REST Query Parameter</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_header_map_4f356713cb410200080cb967634c9c8b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_header_map"><sys_ws_header_map action="INSERT_OR_UPDATE"><sys_class_name>sys_ws_header_map</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2015-07-10 05:34:04</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>4f356713cb410200080cb967634c9c8b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>13742713cb410200080cb967634c9ca9</sys_name><sys_package display_value="Demo API" source="sn_demo_api">bebfdb9fcb010200080cb967634c9ce0</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Demo API">bebfdb9fcb010200080cb967634c9ce0</sys_scope><sys_update_name>sys_ws_header_map_4f356713cb410200080cb967634c9c8b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2015-07-10 05:34:04</sys_updated_on><web_service_header display_value="X-Custom">13742713cb410200080cb967634c9ca9</web_service_header><web_service_operation display_value="Path Params">48316f9fcb010200080cb967634c9c71</web_service_operation></sys_ws_header_map></record_update>]]></payload>
+<remote_update_set display_value="Demo API">10b17a8d1398120005d1df173244b037</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2015-12-11 15:26:22</sys_created_on>
+<sys_id>dcb17a8d1398120005d1df173244b037</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2015-12-11 15:26:22</sys_updated_on>
+<table/>
+<target_name>13742713cb410200080cb967634c9ca9</target_name>
+<type>Scripted REST Header Association</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
